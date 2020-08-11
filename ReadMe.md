@@ -4,9 +4,12 @@
 ### Description
 =
 ### BDD Process
-1. example
-      * **Input**:
-      * **Output**:
+1. Letters have set number value
+      * **Input**: A, D, U
+      * **Output**: 1, 2, 1
+2. User can enter a word and get a total returned.
+      * **Input**: total
+      * **Output**: 5
 ### Setup
 *
 ### Contact
