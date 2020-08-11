@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName;
+using ScrabbleScorer;
 
-namespace ProjectNameTests {
+namespace ScrabbleScorerTests {
     [TestClass]
-    public class ClassNameTests {
+    public class ScrabbleSetScoreTests {
         // Test methods go here
         [TestMethod]
         public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue () 

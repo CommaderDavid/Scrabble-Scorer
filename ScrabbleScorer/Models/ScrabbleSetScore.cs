@@ -1,6 +1,6 @@
-namespace ProjectName 
+namespace ScrabbleScorer 
 {
-    public class ClassName 
+    public class ScrabbleSetScore
     {
         // properties, constructors, methods, etc. go here
     }
