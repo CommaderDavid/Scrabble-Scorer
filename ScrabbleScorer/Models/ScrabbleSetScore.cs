@@ -1,16 +1,27 @@
 using System.Collections.Generic;
+using System;
 
-namespace ScrabbleScorer {
-    public class ScrabbleSetScore {
-        // properties, constructors, methods, etc. go here
-        // create arrays to hold the letters, then directory to assign them a corisponding number
-        Dictionary<string, int> myDictionary = new Dictionary<string, int> () { { "A", 1 }, { "B", 1 } };
-        string[] ones = {"a", "e", "i", "o", "u", "l", "n", "r", "s", "t"};
-        string[] twos = {"d", "g"};
-        string[] threes = {"b", "c", "m", "p"};
-        string[] fours = {"f", "h", "v", "w", "y"};
-        string[] fives = {"k"};
-        string[] eights = {"j", "x"};
-        string[] tens = {"q", "z"};
+namespace ScrabbleScorer 
+{
+    public class ScrabbleSetScore 
+    {
+        //props
+        public string UserWord { get; set; }
+        public static Dictionary<char, int> scrabbleSet = new Dictionary<char, int> () 
+        { 
+            { 'a', 1 },  { 'b', 3 },  { 'c', 3 },  { 'd', 2 },  { 'e', 1 },  { 'f', 4 },  { 'g', 2 },  { 'h', 4 },  { 'i', 1 },  { 'j', 8 },  { 'k', 5 },  { 'l', 1 },  { 'm', 3 },  { 'n', 1 },  { 'o', 1 },  { 'p', 3 },  { 'q', 10 },  { 'r', 1 },  { 's', 1 },  { 't', 1 },  { 'u', 1 },  { 'v', 4 },  { 'w', 4 },  { 'x', 8 },  { 'y', 4 },  { 'z', 10 }, 
+        };
+        
+        //constructor
+        public ScrabbleSetScore(string userWord)
+        {
+            UserWord = userWord;
+        }
+
+        //methods
+        public int WordTotal()
+        {
+            return 
+        }
     }
 }
