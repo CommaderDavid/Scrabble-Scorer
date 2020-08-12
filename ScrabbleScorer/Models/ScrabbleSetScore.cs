@@ -19,9 +19,9 @@ namespace ScrabbleScorer
         }
 
         //methods
-        public int WordTotal()
-        {
-            return 
-        }
+        // public int WordTotal()
+        // {
+        //     return 7;
+        // }
     }
 }
