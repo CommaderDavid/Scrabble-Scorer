@@ -7,7 +7,6 @@ namespace ScrabbleScorer
     {
         //props
         public string UserWord { get; set; }
-        public char UserLetter { get; set; }
         public static Dictionary<char, int> scrabbleSet = new Dictionary<char, int> () 
         { 
             { 'a', 1 },  { 'b', 3 },  { 'c', 3 },  { 'd', 2 },  { 'e', 1 },  { 'f', 4 },  { 'g', 2 },  { 'h', 4 },  { 'i', 1 },  { 'j', 8 },  { 'k', 5 },  { 'l', 1 },  { 'm', 3 },  { 'n', 1 },  { 'o', 1 },  { 'p', 3 },  { 'q', 10 },  { 'r', 1 },  { 's', 1 },  { 't', 1 },  { 'u', 1 },  { 'v', 4 },  { 'w', 4 },  { 'x', 8 },  { 'y', 4 },  { 'z', 10 }, 
@@ -18,20 +17,26 @@ namespace ScrabbleScorer
         {
             UserWord = userWord;
         }
-        public ScrabbleSetScore(char userLetter)
-        {
-            UserLetter = userLetter;
-        }
-
 
         //methods
         // public int WordTotal()
         // {
         //     return 7;
         // }
-        public int LetterScore(char letter)
+        public int LetterScore(string letter)
         {
-            return scrabbleSet[letter];
+            return scrabbleSet[Convert.ToChar(letter)];
+        }
+        public string CheckIfAlphabetical(string number)
+        {
+            foreach (char symbol in number)
+            {
+                if (!Char.IsLetter(symbol))
+                {
+                    return "This is scrabble, Why the number?";  
+                }
+            }
+            return "OK";
         }
     }
 }
