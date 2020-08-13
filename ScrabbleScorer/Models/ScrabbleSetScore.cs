@@ -19,17 +19,19 @@ namespace ScrabbleScorer
         }
 
         //methods
-        // public int WordTotal()
-        // {
-        //     return 7;
-        // }
-        public int LetterScore(string letter)
+        public int WordTotal()
         {
-            return scrabbleSet[Convert.ToChar(letter)];
+            return 7;
         }
-        public string CheckIfAlphabetical(string number)
+
+        public int LetterScore()
         {
-            foreach (char symbol in number)
+            return scrabbleSet[Convert.ToChar(UserWord)];
+        }
+        
+        public string CheckIfAlphabetical()
+        {
+            foreach (char symbol in UserWord)
             {
                 if (!Char.IsLetter(symbol))
                 {

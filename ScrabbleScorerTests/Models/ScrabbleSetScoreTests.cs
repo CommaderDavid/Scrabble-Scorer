@@ -12,7 +12,7 @@ namespace ScrabbleScorerTests {
             string letter = "g";
             ScrabbleSetScore newScore = new ScrabbleSetScore(letter);
             // Act
-            int result = newScore.LetterScore(letter);
+            int result = newScore.LetterScore();
             // Assert
             Assert.AreEqual(2, result);
         }
@@ -25,7 +25,7 @@ namespace ScrabbleScorerTests {
             ScrabbleSetScore newScore = new ScrabbleSetScore(number);
 
             // Act
-            string result = newScore.CheckIfAlphabetical(number);
+            string result = newScore.CheckIfAlphabetical();
 
             // Assert
             Assert.AreEqual ("This is scrabble, Why the number?", result);
@@ -39,18 +39,21 @@ namespace ScrabbleScorerTests {
             ScrabbleSetScore newScore = new ScrabbleSetScore(letters);
 
             // Act
-            string result = newScore.CheckIfAlphabetical(letters);
+            string result = newScore.CheckIfAlphabetical();
 
             // Assert
             Assert.AreEqual("OK", result);
         }
 
-        // [TestMethod]
-        // public void WordNumberValue_WordsTotalValue_Int()
-        // {
-        //     // any necessary logic to prep for test; instantiating new classes, etc.
-        //     // Assert.AreEqual (EXPECTED RESULT, CODE TO TEST);
-        // }
+        [TestMethod]
+        public void WordTotal_ReturnsAWordsTotalValue_Int()
+        {
+            // Arrange
+            string letters = "total";
+            ScrabbleSetScore newScore = new ScrabbleSetScore(letters);
+
+            // Assert.AreEqual (EXPECTED RESULT, CODE TO TEST);
+        }
 
         // [TestMethod]
         // public void NotAWord_NumbersAndSentencesDontWork_True()
