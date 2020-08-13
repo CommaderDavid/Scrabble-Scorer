@@ -21,24 +21,37 @@ namespace ScrabbleScorer
         //methods
         public int WordTotal()
         {
-            return 7;
+            int total = 0;
+
+            if (CheckIfAlphabetical())
+            {
+                foreach (char letter in UserWord)
+                {
+                    total += LetterScore(letter);
+                }
+            }
+            else
+            {
+                Console.WriteLine("This is scrabble, Why the numbers?");
+            }
+            return total;
         }
 
-        public int LetterScore()
+        public int LetterScore(char letter)
         {
-            return scrabbleSet[Convert.ToChar(UserWord)];
+            return scrabbleSet[letter];
         }
         
-        public string CheckIfAlphabetical()
+        public bool CheckIfAlphabetical()
         {
             foreach (char symbol in UserWord)
             {
                 if (!Char.IsLetter(symbol))
                 {
-                    return "This is scrabble, Why the number?";  
+                    return false;  
                 }
             }
-            return "OK";
+            return true;
         }
     }
 }
