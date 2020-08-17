@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace ScrabbleScorer 
+namespace ScrabbleScorer.Models
 {
     public class ScrabbleSetScore 
     {
